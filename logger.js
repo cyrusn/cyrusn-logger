@@ -1,4 +1,5 @@
-var colors = require('colors');
+var colors = require('colors'),
+     tracer = require('tracer');
 
 var filters = {
     log: colors.grey,
@@ -10,7 +11,7 @@ var filters = {
 };
 var format = "{{timestamp}} {{title}}/{{file}}:{{line}} {{message}}";
 
-var logger = require('tracer').colorConsole({
+var logger = tracer.colorConsole({
     format: [
         format, //default format
         {
